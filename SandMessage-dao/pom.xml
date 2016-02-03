@@ -1,7 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.smilesmile1973</groupId>
-  <artifactId>SandMessage-dao</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SandMessage-dao</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>SandMessage-dao</name>
+	<parent>
+		<groupId>com.smilesmile1973</groupId>
+		<artifactId>SandMessage-root</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../SandMessage-root</relativePath>
+	</parent>
+	<artifactId>SandMessage-dao</artifactId>
+	<packaging>jar</packaging>
 </project>
