@@ -6,7 +6,7 @@
 		<groupId>com.smilesmile1973</groupId>
 		<artifactId>SandMessage-root</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../../SandMessage-root</relativePath>
+		<relativePath>../../SandMessage-root/SandMessage-root</relativePath>
 	</parent>
 	<artifactId>SandMessage-dao</artifactId>
 	<packaging>jar</packaging>
