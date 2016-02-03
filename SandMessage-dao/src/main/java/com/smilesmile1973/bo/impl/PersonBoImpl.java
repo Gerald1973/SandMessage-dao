@@ -16,8 +16,7 @@ public class PersonBoImpl implements PersonBo {
 	
 	@Autowired
 	PersonDao personDao;
-	
-	@Transactional
+	@Transactional(readOnly=false)
 	public int save(PersonDTO personDTO) {
 		Person person = new Person();
 		person.setEmail(person.getEmail());
