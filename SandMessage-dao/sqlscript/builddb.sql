@@ -7,7 +7,8 @@ create table sandmessage.person
 	first_name varchar(64) not null,
 	last_name varchar(64) not null,
 	nickname varchar(16) not null,
-	email varchar(256) not null
+	email varchar(256) not null,
+	password varchar(128) not null,
 );
 
 create table sandmessage.message
@@ -20,7 +21,7 @@ create table sandmessage.message
 	foreign key (fk_person) REFERENCES sandmessage.person (id)
 );
 
-insert into sandmessage.person(id,first_name,last_name,nickname,email) values (1,'Gérald','Maréchal','gerald1973','gerald1973@gmail.com');
+insert into sandmessage.person(id,first_name,last_name,nickname,email,password) values (1,'Gérald','Maréchal','gerald1973','gerald1973@gmail.com','password');
 
 
 

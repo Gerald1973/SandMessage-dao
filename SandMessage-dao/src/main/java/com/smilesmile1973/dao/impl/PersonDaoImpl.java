@@ -13,8 +13,9 @@ import com.smilesmile1973.util.CustomHibernateDaoSupport;
 @Repository("stockDao")
 public class PersonDaoImpl extends CustomHibernateDaoSupport implements PersonDao{
 
-	public void save(Person person) {
-		getHibernateTemplate().save(person);
+	public int save(Person person) {
+		Integer id = (Integer) getHibernateTemplate().save(person);
+		return id;
 		
 	}
 

@@ -14,6 +14,7 @@ public class Person {
 	private String lastName;
 	private String nickname;
 	private String email;
+	private String password;
 	
 	@Id
 	@GeneratedValue
@@ -56,6 +57,14 @@ public class Person {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	@Column(name="password",nullable=false)
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
