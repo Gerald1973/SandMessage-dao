@@ -3,7 +3,9 @@ package com.smilesmile1973.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -17,7 +19,8 @@ public class Person {
 	private String password;
 	
 	@Id
-	@GeneratedValue
+	@SequenceGenerator(name = "PersonSequence", sequenceName = "seq_person", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PersonSequence")
 	@Column(name = "ID")
 	public Integer getId() {
 		return id;
@@ -26,7 +29,7 @@ public class Person {
 		this.id = id;
 	}
 	
-	@Column(name="first_name",nullable=false)
+	@Column(name="FIRST_NAME",nullable=false)
 	public String getFirstName() {
 		return firstName;
 	}
@@ -34,7 +37,7 @@ public class Person {
 		this.firstName = firstName;
 	}
 	
-	@Column(name="last_name",nullable=false)
+	@Column(name="LAST_NAME",nullable=false)
 	public String getLastName() {
 		return lastName;
 	}
@@ -43,7 +46,7 @@ public class Person {
 		this.lastName = lastName;
 	}
 	
-	@Column(name="nickname",nullable=false)
+	@Column(name="NICKNAME",nullable=false)
 	public String getNickname() {
 		return nickname;
 	}
@@ -51,7 +54,7 @@ public class Person {
 		this.nickname = nickname;
 	}
 	
-	@Column(name="email",nullable=false)
+	@Column(name="EMAIL",nullable=false)
 	public String getEmail() {
 		return email;
 	}
@@ -59,7 +62,7 @@ public class Person {
 		this.email = email;
 	}
 	
-	@Column(name="password",nullable=false)
+	@Column(name="PASSWORD",nullable=false)
 	public String getPassword() {
 		return password;
 	}

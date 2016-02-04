@@ -21,7 +21,12 @@ create table sandmessage.message
 	foreign key (fk_person) REFERENCES sandmessage.person (id)
 );
 
-insert into sandmessage.person(id,first_name,last_name,nickname,email,password) values (1,'Gérald','Maréchal','gerald1973','gerald1973@gmail.com','password');
+--sequences
+create sequence seq_person as integer start with 1 increment by 1;
+
+
+insert into sandmessage.person(id,first_name,last_name,nickname,email,password) 
+values (NEXT VALUE FOR seq_person,'Gérald','Maréchal','gerald1973','gerald1973@gmail.com','password');
 
 
 

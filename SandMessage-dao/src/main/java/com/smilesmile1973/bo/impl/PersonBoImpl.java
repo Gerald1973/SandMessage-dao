@@ -24,7 +24,7 @@ public class PersonBoImpl implements PersonBo {
 		person.setEmail(personDTO.getEmail());
 		person.setLastName(personDTO.getLastName());
 		person.setNickname(personDTO.getNickname());
-		person.setPassword(person.getPassword());
+		person.setPassword(personDTO.getPassword());
 		int id = getPersonDao().save(person);
 		return id;
 	}
