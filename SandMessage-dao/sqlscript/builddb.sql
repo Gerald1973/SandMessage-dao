@@ -23,6 +23,7 @@ create table sandmessage.message
 
 --sequences
 create sequence seq_person as integer start with 1 increment by 1;
+create sequence seq_message as integer start with 1 increment by 1;
 
 
 insert into sandmessage.person(id,first_name,last_name,nickname,email,password) 
