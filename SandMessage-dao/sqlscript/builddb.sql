@@ -1,5 +1,7 @@
 --Construction of the DB
 DROP schema sandmessage CASCADE;
+DROP SEQUENCE seq_person IF EXISTS;
+DROP SEQUENCE seq_message IF EXISTS;
 CREATE schema sandmessage AUTHORIZATION DBA;
 create table sandmessage.person 
 (
@@ -9,6 +11,7 @@ create table sandmessage.person
 	nickname varchar(16) not null,
 	email varchar(256) not null,
 	password varchar(128) not null,
+	active boolean default false not null
 );
 
 create table sandmessage.message

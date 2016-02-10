@@ -17,6 +17,7 @@ public class Person {
 	private String nickname;
 	private String email;
 	private String password;
+	private boolean active;
 	
 	@Id
 	@SequenceGenerator(name = "PersonSequence", sequenceName = "seq_person", allocationSize=1)
@@ -69,7 +70,12 @@ public class Person {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public boolean isActive() {
+		return active;
+	}
 	
-	
-	
+	@Column(name="ACTIVE",nullable=false)
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 }

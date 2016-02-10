@@ -10,7 +10,7 @@ import com.smilesmile1973.dao.PersonDao;
 import com.smilesmile1973.entity.Person;
 import com.smilesmile1973.util.CustomHibernateDaoSupport;
 
-@Repository("stockDao")
+@Repository("personDao")
 public class PersonDaoImpl extends CustomHibernateDaoSupport implements PersonDao{
 
 	public int save(Person person) {
